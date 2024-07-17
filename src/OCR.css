@@ -5,7 +5,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +12,6 @@ body {
   }
   
   body.dark-mode {
-    background-color: #121212;
     color: #e0e0e0;
   }
   
@@ -35,6 +33,7 @@ body {
     width: 100%;
     margin: 20px;
     border: 1px solid #ccc;
+    color: #333;
   }
   
   .OCR.dark-mode {
@@ -46,11 +45,6 @@ body {
   .OCR h1 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .OCR.dark-mode h1 {
-    color: #e0e0e0;
   }
   
   .OCR input[type="file"] {
@@ -86,6 +80,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin-right: 10px;
   }
   
   .OCR.dark-mode button.extract-text {
@@ -105,7 +100,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    margin-left: 10px;
+    margin-right: 10px;
   }
   
   .OCR.dark-mode button.clear {
@@ -116,10 +111,28 @@ body {
     background-color: #c82333;
   }
   
+  .OCR button.download {
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .OCR.dark-mode button.download {
+    background-color: #138496;
+  }
+  
+  .OCR button.download:hover {
+    background-color: #138496;
+  }
+  
   .OCR p {
     margin-top: 20px;
     font-size: 18px;
-    color: #666;
   }
   
   .OCR.dark-mode p {
@@ -132,6 +145,13 @@ body {
   
   .OCR.dark-mode p.loading {
     color: #0056b3;
+  }
+  
+  .image-previews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
   
   .image-preview {
@@ -165,5 +185,9 @@ body {
   
   .toggle-mode:hover {
     background-color: #e68a00;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
   }
   

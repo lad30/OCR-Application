@@ -63,8 +63,8 @@ const OCR = () => {
       <label htmlFor="file">Choose an Image</label>
       {imagePreviewUrl && <img src={imagePreviewUrl} alt="Selected" className="image-preview" />}
       <div className="buttons">
-        <button onClick={handleClick}>Extract Text</button>
-        <button onClick={handleClear}>Clear</button>
+        <button className="extract-text" onClick={handleClick}>Extract Text</button>
+        <button className="clear" onClick={handleClear}>Clear</button>
       </div>
       {isLoading ? <p className="loading">Loading...</p> : <p>{text}</p>}
     </div>

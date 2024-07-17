@@ -12,6 +12,11 @@ body {
     height: 100vh;
   }
   
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
   .App {
     display: flex;
     justify-content: center;
@@ -32,10 +37,20 @@ body {
     border: 1px solid #ccc;
   }
   
+  .OCR.dark-mode {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+  }
+  
   .OCR h1 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
+  }
+  
+  .OCR.dark-mode h1 {
+    color: #e0e0e0;
   }
   
   .OCR input[type="file"] {
@@ -54,6 +69,10 @@ body {
     transition: background-color 0.3s ease;
   }
   
+  .OCR.dark-mode label {
+    background-color: #0056b3;
+  }
+  
   .OCR label:hover {
     background-color: #0056b3;
   }
@@ -69,6 +88,10 @@ body {
     transition: background-color 0.3s ease;
   }
   
+  .OCR.dark-mode button {
+    background-color: #218838;
+  }
+  
   .OCR button:hover {
     background-color: #218838;
   }
@@ -79,8 +102,16 @@ body {
     color: #666;
   }
   
+  .OCR.dark-mode p {
+    color: #e0e0e0;
+  }
+  
   .OCR p.loading {
     color: #007bff;
+  }
+  
+  .OCR.dark-mode p.loading {
+    color: #0056b3;
   }
   
   .image-preview {
@@ -90,5 +121,29 @@ body {
     border: 2px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .OCR.dark-mode .image-preview {
+    border: 2px solid #444;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .toggle-mode {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-mode:hover {
+    background-color: #e68a00;
   }
   

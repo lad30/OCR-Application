@@ -9,6 +9,7 @@ const OCR = () => {
   const [imagePreviewUrl, setImagePreviewUrl] = useState(null);
   const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -42,13 +43,29 @@ const OCR = () => {
     }
   };
 
+  const handleClear = () => {
+    setImage(null);
+    setImagePreviewUrl(null);
+    setText('');
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="OCR">
+    <div className={`OCR ${darkMode ? 'dark-mode' : ''}`}>
       <h1>OCR Application</h1>
+      <button className="toggle-mode" onClick={toggleDarkMode}>
+        {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      </button>
       <input type="file" id="file" accept="image/*" onChange={handleImageChange} />
       <label htmlFor="file">Choose an Image</label>
       {imagePreviewUrl && <img src={imagePreviewUrl} alt="Selected" className="image-preview" />}
-      <button onClick={handleClick}>Extract Text</button>
+      <div className="buttons">
+        <button onClick={handleClick}>Extract Text</button>
+        <button onClick={handleClear}>Clear</button>
+      </div>
       {isLoading ? <p className="loading">Loading...</p> : <p>{text}</p>}
     </div>
   );

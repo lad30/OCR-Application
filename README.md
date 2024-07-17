@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Create React App- OCR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a ReactJS application for performing Optical Character Recognition (OCR) on images. The app allows you to upload an image and extract text from it using the Tesseract.js library.
 
 ## Available Scripts
 
